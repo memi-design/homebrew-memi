@@ -1,13 +1,13 @@
 cask "memi-studio" do
-  version "1.0.4"
+  version "2.4.0"
 
   on_arm do
-    sha256 "cd1dc510dedfe4fc9735b6a48e32df4cc59d82a61d9cc4e327e243d1e832c8a6"
+    sha256 "b99cd6935d86fa23b3049574c5a832a8c826931e5cb7647bad64de6c449af541"
 
     url "https://github.com/sarveshsea/memi-studio/releases/download/v#{version}/Memoire.Studio_#{version}_aarch64.dmg"
   end
   on_intel do
-    sha256 "11364b2d218c0224046afdce10123189aab011ef6cd9296d32d068ce02814092"
+    sha256 "77957f4c92886ec6a93e965265b6ae52d76ee8e38ed01d8bf14c5e92de1e413a"
 
     url "https://github.com/sarveshsea/memi-studio/releases/download/v#{version}/Memoire.Studio_#{version}_x64.dmg"
   end
