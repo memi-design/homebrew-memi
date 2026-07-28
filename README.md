@@ -1,11 +1,12 @@
 # homebrew-memi
 
-Homebrew tap for **[Mémoire Studio](https://github.com/sarveshsea/memi-studio)** — the native macOS agent shell for Codex, Claude Code, OpenCode, Hermes, Ollama, Gemini, and Mémoire-native.
+Official Homebrew tap for the **[Memi CLI](https://github.com/memi-design/memi)** and **[Memi Studio](https://github.com/memi-design/memi-studio)**.
 
 ## Install
 
 ```bash
-brew install --cask sarveshsea/memi/memi-studio
+brew install memi-design/memi/memoire
+brew install --cask memi-design/memi/memi-studio
 ```
 
 That's it. Brew adds the tap implicitly the first time you reference a cask under it.
@@ -13,7 +14,7 @@ That's it. Brew adds the tap implicitly the first time you reference a cask unde
 If you prefer to add the tap explicitly first:
 
 ```bash
-brew tap sarveshsea/memi
+brew tap memi-design/memi
 brew install --cask memi-studio
 ```
 
@@ -23,7 +24,7 @@ brew install --cask memi-studio
 brew upgrade --cask memi-studio
 ```
 
-The cask carries `livecheck` against the [GitHub Releases](https://github.com/sarveshsea/memi-studio/releases) page, so `brew upgrade` picks up new stable versions automatically once the cask in this tap is bumped (typically same-day as a `v*` tag on memi-studio).
+The cask carries `livecheck` against the [GitHub Releases](https://github.com/memi-design/memi-studio/releases) page, so `brew upgrade` picks up new stable versions automatically once the cask in this tap is bumped (typically same-day as a `v*` tag on memi-studio).
 
 ## Uninstall
 
@@ -49,11 +50,11 @@ The cask is bumped manually for now (PR or direct push to main). A future iterat
 
 ## Related
 
-- App source: [sarveshsea/memi-studio](https://github.com/sarveshsea/memi-studio)
-- Engine: [sarveshsea/m-moire](https://github.com/sarveshsea/m-moire)
-- Releases (DMGs + checksums): [sarveshsea/memi-studio/releases](https://github.com/sarveshsea/memi-studio/releases)
+- App source: [memi-design/memi-studio](https://github.com/memi-design/memi-studio)
+- Engine and CLI: [memi-design/memi](https://github.com/memi-design/memi)
+- Releases (DMGs + checksums): [memi-design/memi-studio/releases](https://github.com/memi-design/memi-studio/releases)
 
 ## License
 
 This tap repository: MIT.
-The Mémoire Studio app itself: [FSL-1.1-ALv2](https://github.com/sarveshsea/memi-studio/blob/main/LICENSE) (Humyn LLC).
+The Memi Studio app itself: [FSL-1.1-ALv2](https://github.com/memi-design/memi-studio/blob/main/LICENSE) (Humyn LLC).
