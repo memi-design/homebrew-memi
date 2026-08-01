@@ -1,30 +1,30 @@
 # Homebrew formula template for Mémoire
 #
-# This file is a TEMPLATE. CI fills in 2.7.1 and @SHA_*@ placeholders on
+# This file is a TEMPLATE. CI fills in 2.7.3 and @SHA_*@ placeholders on
 # every release and pushes the result to the homebrew-memi tap repo.
 # Users install with:  brew install memi-design/memi/memoire
 #
 class Memoire < Formula
   desc "Registry-first CLI for publishing Figma design systems as installable packages"
   homepage "https://memoire.cv"
-  version "2.7.1"
+  version "2.7.3"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/memi-design/memi/releases/download/v2.7.1/memi-darwin-arm64.tar.gz"
-      sha256 "2aa9c2ec54f6b9bbd36cc9110b251c293c47619872c10e7b866f105f65857156"
+      url "https://github.com/memi-design/memi/releases/download/v2.7.3/memi-darwin-arm64.tar.gz"
+      sha256 "fa4b50ed071c485b8b879149fbcf89b55601f8f564ffa26b08ff461f3a1ec120"
     end
     on_intel do
-      url "https://github.com/memi-design/memi/releases/download/v2.7.1/memi-darwin-x64.tar.gz"
-      sha256 "7288152afb1d88fb129545fec6a020e29a8ec0e22c5cdb58a852ceedf21ec9a4"
+      url "https://github.com/memi-design/memi/releases/download/v2.7.3/memi-darwin-x64.tar.gz"
+      sha256 "1d93f0b72f9045012e2ec62ab67150ff847314b152a712eb223e65a24f6d97c8"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/memi-design/memi/releases/download/v2.7.1/memi-linux-x64.tar.gz"
-      sha256 "de736a28bae2f917185da00bfa44bc86333a6d18f693f510c38ed3ea649048f7"
+      url "https://github.com/memi-design/memi/releases/download/v2.7.3/memi-linux-x64.tar.gz"
+      sha256 "1006e942120360fcede9a3dde3fe3112cda2325f17ce39990c8464bf5b42d1d6"
     end
   end
 
