@@ -25,4 +25,9 @@ jobs:
       - name: Run Homebrew style and audit
         run: |
           brew style Formula/memoire.rb
-          brew audit --formula --strict Formula/memoire.rb
+          tap_root="$(brew --repository)/Library/Taps/memi-design/homebrew-memi"
+          mkdir -p "$(dirname "$tap_root")"
+          if [[ ! -e "$tap_root" ]]; then
+            ln -s "$GITHUB_WORKSPACE" "$tap_root"
+          fi
+          brew audit --formula --strict memi-design/memi/memoire
