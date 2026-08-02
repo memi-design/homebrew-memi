@@ -1,0 +1,28 @@
+name: Validate Homebrew tap
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: macos-14
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: Verify tap release contract
+        run: |
+          ruby test/release_identity_test.rb
+          ruby -c Formula/memoire.rb
+
+      - name: Run Homebrew style and audit
+        run: |
+          brew style Formula/memoire.rb
+          brew audit --formula --strict Formula/memoire.rb
