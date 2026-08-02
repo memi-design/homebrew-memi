@@ -68,7 +68,7 @@ class ReleaseIdentityTest < Minitest::Test
       "name" => "MIT License",
       "url" => "https://github.com/memi-design/memi/blob/main/LICENSE",
     }, cli.fetch("license"))
-    assert_includes FORMULA, %(homepage "#{manifest.dig("organization", "urls", "website").sub("https://memoire.cv", "https://www.memoire.cv")}")
+    assert_includes FORMULA, %(#{cli.dig("urls", "repository")}/releases/download/)
     assert_includes FORMULA, %(license "#{cli.dig("license", "spdx")}")
 
     canvas = manifest.fetch("products").find { |product| product.fetch("id") == "canvas" }

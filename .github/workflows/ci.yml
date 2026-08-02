@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
-      - name: Verify tap release contract
+      - name: Verify tap release and pinned brand contracts
         run: |
           ruby test/release_identity_test.rb
           ruby -c Formula/memoire.rb
