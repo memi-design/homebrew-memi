@@ -47,7 +47,10 @@ class ReleaseIdentityTest < Minitest::Test
     assert_includes workflow, "ruby test/release_identity_test.rb"
     assert_includes workflow, "ruby -c Formula/memoire.rb"
     assert_includes workflow, "brew style Formula/memoire.rb"
-    assert_includes workflow, "brew audit --formula --strict Formula/memoire.rb"
+    assert_includes workflow, 'tap_root="$(brew --repository)/Library/Taps/memi-design/homebrew-memi"'
+    assert_includes workflow, 'ln -s "$GITHUB_WORKSPACE" "$tap_root"'
+    assert_includes workflow, "brew audit --formula --strict memi-design/memi/memoire"
+    refute_includes workflow, "brew audit --formula --strict Formula/memoire.rb"
   end
 
   def test_tap_pins_revision_3_organization_brand_and_canvas_truth
