@@ -5,7 +5,7 @@
 # Users install with:  brew install memi-design/memi/memoire
 #
 class Memoire < Formula
-  desc "Registry-first CLI for publishing Figma design systems as installable packages"
+  desc "Design context and read-only interface audits for coding agents"
   homepage "https://memoire.cv"
   version "2.7.9"
   license "MIT"
